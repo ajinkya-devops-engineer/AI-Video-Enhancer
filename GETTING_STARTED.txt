@@ -1,0 +1,191 @@
+================================================================================
+                        AI VIDEO ENHANCER
+                   Getting Started Guide
+================================================================================
+
+Welcome to AI Video Enhancer! This guide will help you get started quickly.
+
+================================================================================
+QUICK START (3 STEPS)
+================================================================================
+
+STEP 1: Install Dependencies
+-----------------------------
+Option A - Using install.bat (Recommended for Windows):
+   Double-click: install.bat
+
+Option B - Manual installation:
+   1. Open Command Prompt in this folder
+   2. Run: python -m venv venv
+   3. Run: venv\Scripts\activate
+   4. Run: pip install -r requirements.txt
+
+STEP 2: Verify Installation
+----------------------------
+   Run: python test_system.py
+   
+   This will check:
+   - Python version
+   - Required packages
+   - FFmpeg installation
+   - CUDA availability
+   - System resources
+
+STEP 3: Start the Application
+------------------------------
+Option A - Using run.bat (Recommended):
+   Double-click: run.bat
+
+Option B - Manual start:
+   1. Open Command Prompt in this folder
+   2. Run: venv\Scripts\activate
+   3. Run: streamlit run app.py
+
+The application will open in your browser at: http://localhost:8501
+
+================================================================================
+FIRST TIME SETUP
+================================================================================
+
+1. Download AI Models (Required - First Time Only)
+   - Open the application
+   - Look at the sidebar on the left
+   - Click "Download general" button
+   - Wait for download to complete (~64MB)
+   - Optionally download "anime" model for animated content (~17MB)
+
+2. Upload Your First Video
+   - Click "Browse files" under "Upload Videos"
+   - Select a video file (MP4, AVI, MOV, etc.)
+   - Video will be uploaded and analyzed
+
+3. Configure Settings
+   - Target Resolution: Start with 1080p for testing
+   - AI Model: Choose "General Purpose" for regular videos
+   - Output Directory: Leave as default "output/"
+
+4. Start Enhancement
+   - Click "Start Enhancement" button
+   - Switch to "Processing Queue" tab
+   - Watch real-time progress
+
+5. Get Your Enhanced Video
+   - Find enhanced video in "output/" folder
+   - Filename: {original}_enhanced_{resolution}.{extension}
+
+================================================================================
+SYSTEM REQUIREMENTS
+================================================================================
+
+Minimum:
+   - Python 3.8 or higher
+   - FFmpeg installed
+   - 8GB RAM
+   - 10GB free disk space
+
+Recommended:
+   - Python 3.9+
+   - FFmpeg installed
+   - 16GB RAM
+   - NVIDIA GPU with CUDA
+   - 50GB+ free disk space
+
+================================================================================
+IMPORTANT NOTES
+================================================================================
+
+✓ FFmpeg Required: Must be installed and in system PATH
+  Windows: Download from ffmpeg.org
+  Linux: sudo apt install ffmpeg
+  macOS: brew install ffmpeg
+
+✓ GPU Recommended: Processing is 10-30x faster with NVIDIA GPU
+  Without GPU: Still works, but much slower
+
+✓ First Run: Models will be downloaded (~80MB total)
+
+✓ Privacy: All processing is done locally on your computer
+
+✓ Original Files: Never modified, always preserved
+
+================================================================================
+PROCESSING TIME ESTIMATES
+================================================================================
+
+With GPU (NVIDIA RTX 3060):
+   720p → 1080p: ~15-30 seconds per minute of video
+   1080p → 4K:   ~30-60 seconds per minute of video
+
+Without GPU (CPU only):
+   720p → 1080p: ~2-5 minutes per minute of video
+   1080p → 4K:   ~5-10 minutes per minute of video
+
+Tip: Start with a short video (30 seconds) to test!
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Problem: "FFmpeg not found"
+Solution: Install FFmpeg and add to system PATH
+          Verify with: ffmpeg -version
+
+Problem: "CUDA out of memory"
+Solution: Process smaller videos or use lower resolution
+
+Problem: Slow processing
+Solution: Normal without GPU. Consider using GPU-enabled system.
+
+Problem: "Module not found"
+Solution: Ensure virtual environment is activated
+          Run: pip install -r requirements.txt
+
+================================================================================
+DOCUMENTATION
+================================================================================
+
+README.md           - Comprehensive documentation
+QUICKSTART.md       - Quick start guide (5 minutes)
+PROJECT_OVERVIEW.md - Technical details and architecture
+config.py           - Configuration options
+
+================================================================================
+GETTING HELP
+================================================================================
+
+1. Check error messages in the application
+2. Review console output for detailed logs
+3. Run: python test_system.py
+4. Read README.md for detailed information
+5. Check system requirements
+
+================================================================================
+FEATURES AT A GLANCE
+================================================================================
+
+✓ AI-Powered Upscaling (1080p, 2K, 4K, 8K)
+✓ Multiple AI Models (General, Anime/Cartoon)
+✓ Audio Preservation (Original quality maintained)
+✓ Batch Processing (Queue multiple videos)
+✓ Real-Time Progress Tracking
+✓ User-Friendly Web Interface
+✓ Local Processing (Privacy-friendly)
+✓ GPU Acceleration Support
+
+================================================================================
+SUPPORT
+================================================================================
+
+For questions or issues:
+- Review documentation files
+- Check error messages
+- Run system tests
+- Verify prerequisites
+
+================================================================================
+
+Ready to enhance your videos? Run: run.bat
+
+Happy Enhancing! 🎬✨
+
+================================================================================
